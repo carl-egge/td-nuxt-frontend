@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
 
-    // Meta Tags and Head
+  // Meta Tags and Head
   app: {
     head: {
       title: 'Theaterdeck',
@@ -17,12 +17,10 @@ export default defineNuxtConfig({
       ],
       link: [
         {rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons'},
-        // {rel: 'stylesheet', href: 'https://pretix.eu/demo/democon/widget/v1.css'},
+        {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
+        {rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+        {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap'},
       ],
-      // script: [
-      //   { src: '/js/pretixwidget.js', type: 'text/javascript', async: true },
-      //   //{src: 'https://pretix.eu/widget/v1.en.js', async: true},
-      // ],
     }
   },
     
