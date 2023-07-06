@@ -3,7 +3,7 @@
 
         <TheNavBar />
 
-        <v-main class="container mx-auto">
+        <v-main class="mx-2" :class="{ 'reduced-content-width': !isMobile }">
             <slot />
         </v-main>
 
@@ -23,10 +23,17 @@
 import { useEventsStore } from '~/store/events'
 const eventsStore = useEventsStore()
 if (eventsStore.events.length === 0) eventsStore.fetchEvents()
+
+// Set content width
+import { useDisplay } from 'vuetify'
+const display = useDisplay()
+const isMobile = display.smAndDown
+
 </script>
 
 <style lang="scss" scoped>
-.v-main {
+.reduced-content-width {
     width: 70vw;
+    margin: 0 auto !important;
 }
 </style>
