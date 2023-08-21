@@ -46,6 +46,14 @@ export const useEventsStore = defineStore({
 
   getters: {
     /**
+     * getAll
+     * @returns {EventAPIData[]} All events in the store
+     */
+    getAll: (state): EventAPIData[] => {
+      return state.events;
+    },
+
+    /**
      * countEvents
      * @returns {number} The number of events in the store
      */

@@ -1,8 +1,12 @@
 <template>
     <div>
-        <h1>PROGRAMM</h1>
-        <div v-for="event in eventsStore.events">
+        <PageHero title="Programm" breadcrumb="home" />
+        <div v-if="eventsStore.countEvents > 0" v-for="event in eventsStore.getAll">
             <EventListItem :event="event" />
+        </div>
+        <div v-else>
+            <p>Keine Events gefunden</p>
+            <v-btn to="/stuecke" nuxt class="my-4"> Erneut Versuchen </v-btn>
         </div>
     </div>
 </template>
