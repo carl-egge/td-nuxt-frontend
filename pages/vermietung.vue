@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>VERMIETUNG</h1>
+        <PageHero title="Vermietung" />
     </div>
 </template>
 

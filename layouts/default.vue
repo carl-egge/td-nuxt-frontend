@@ -3,7 +3,12 @@
 
         <TheNavBar />
 
-        <v-main class="mx-2" :class="{ 'reduced-content-width': !isMobile }">
+        <!-- <v-main :class="{ 'reduced-content-width': !isMobile }"> -->
+        <v-main>
+            <!-- ALWAYS ADD THIS BEFORE LIVE DEPLOYMENT ON TEST SITE -->
+            <!-- <div class="text-center text-white" style="background-color: red; height: 25px;">
+                Achtung! Dies ist nur eine Testseite!
+            </div> -->
             <slot />
         </v-main>
 

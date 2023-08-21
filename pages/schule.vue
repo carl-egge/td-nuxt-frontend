@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>SCHULE</h1>
+        <PageHero title="Schule" breadcrumb="home" />
     </div>
 </template>
 

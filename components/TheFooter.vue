@@ -33,22 +33,23 @@
                             </v-col>
                             <!-- Spalte: KONTAKT -->
                             <!-- <v-col md="4" lg="4" xl="3" class="mx-auto my-3 my-md-3 px-md-0"> -->
-                            <v-col id="footer-contact-col">
+                            <v-col id="footer-address-col">
                                 <h6 class="text-uppercase font-weight-bold mb-4">Kontakt</h6>
                                 <p>
-                                    <v-icon>mdi-home</v-icon>Maurienstr.
+                                    <v-icon>mdi-home</v-icon> Maurienstr.
                                     19, 22305 Hamburg
                                 </p>
                                 <p>
-                                    <v-icon>mdi-email</v-icon><a href="mailto:info@theaterdeck.de">info@theaterdeck.de
+                                    <v-icon>mdi-email</v-icon> <a href="mailto:info@theaterdeck.de">info@theaterdeck.de
                                     </a>
                                 </p>
                                 <p>
-                                    <v-icon>mdi-phone</v-icon>040 6321322
+                                    <v-icon>mdi-phone</v-icon> 040 6321322
                                 </p>
                             </v-col>
                             <!-- Spalte: ANSPRECHBARKEIT -->
-                            <v-col md="4" lg="4" xl="3" class="mx-auto mb-4 my-md-3 px-md-0">
+                            <!-- <v-col md="4" lg="4" xl="3" class="mx-auto mb-4 my-md-3 px-md-0"> -->
+                            <v-col id="footer-contact-col">
                                 <h6 class="text-uppercase font-weight-bold mb-4">
                                     Persönlicher Kontakt
                                 </h6>
@@ -66,7 +67,7 @@
             <v-row align-h="between" class="copyright">
                 <v-col class="text-no-wrap text-center text-md-left">
                     <NuxtLink to="/">
-                        © 2022 Theaterdeck Hamburg
+                        © 2023 Theaterdeck Hamburg
                     </NuxtLink>
                 </v-col>
                 <v-col class="text-center text-md-right">
@@ -120,6 +121,12 @@
     margin-right: 0.5rem;
 }
 
+#footer-address-col i {
+    font-size: 0.95rem;
+    vertical-align: middle;
+    // margin-right: 0.5rem;
+}
+
 .copyright {
     border-top: 1px solid #eeeeee33;
     padding: 20px 0;
@@ -131,7 +138,7 @@
 
 @media (max-width: 768px) {
     .copyright {
-        margin: 0 12vw;
+        margin: 0 10vw;
     }
 }
 
