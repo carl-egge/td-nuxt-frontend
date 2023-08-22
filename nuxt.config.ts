@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@invictus.codes/nuxt-vuetify',
     '@pinia/nuxt',
+    'nuxt-mapbox',
   ],
 
   // Meta Tags and Head
@@ -63,5 +64,10 @@ export default defineNuxtConfig({
       //styles: true | 'none' | 'expose' | 'sass' | { configFile: string },
       autoImport: true,
     }
+  },
+
+  // Mapbox
+  mapbox: {
+    accessToken: 'pk.eyJ1IjoiYWxleGxhdm9pZSIsImEiOiJja3RhZmpqZmoxbGlzMndvOGtueDFxYTU3In0.nyGbO7RFkmwC_kYseOZ4Dw'
   }
 })

@@ -12,7 +12,9 @@
     "@invictus.codes/nuxt-vuetify": "^0.2.20",
     "@nuxt/devtools": "latest",
     "@types/node": "^18",
+    "mapbox-gl": "^2.15.0",
     "nuxt": "^3.5.2",
+    "nuxt-mapbox": "^1.4.3",
     "sass": "^1.63.4",
     "sass-loader": "^13.3.2"
   },
