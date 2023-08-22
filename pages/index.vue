@@ -1,22 +1,24 @@
 <template>
     <div>
-        <PageHero title="Home" />
-        <section style="background-color: lightblue; height: 20vh;">
-            Die Shows
-        </section>
-        <section id="teachers" style="background-color: lightgreen; height: 20vh;">
-            Die Lehrer
-        </section>
-        <section id="zitat" style="background-color: lightgray; height: 20vh;" class="text-center d-flex align-center">
-            <h4>"Es wird immer jemanden geben der die Hoffnung nicht aufgibt."</h4>
-        </section>
-        <section style="background-color: lightcoral; height: 20vh;">
-            Kontaktformular
-        </section>
-        <section style="background-color: lightseagreen; height: 20vh;">
-            Anfahrt und Karte
+        <HomeHero />
+        <section id="showslider" class="my-4">
+            <HomeShowSlider />
         </section>
         <NewsletterFooter />
+        <section id="teachers" class="my-4">
+            <h2>Unsere Kursleiter:</h2>
+            <TeacherSlider />
+        </section>
+        <section id="zitat" class="my-4">
+            <HomeCite />
+        </section>
+        <section class="my-4">
+            <ContactForm />
+        </section>
+        <section class="mt-4">
+            <h2>So kommst du zu uns:</h2>
+            <HomeMap />
+        </section>
     </div>
 </template>
 

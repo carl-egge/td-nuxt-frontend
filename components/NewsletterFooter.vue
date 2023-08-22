@@ -2,7 +2,9 @@
     <v-container id="newsletter-footer">
         <v-row>
             <v-col v-if="!isMobile" cols="4">
-                <div style="background-color: red; width: 100%; height: 100%;">Image Here</div>
+                <v-img class="bg-white" width="300" :aspect-ratio="1"
+                    src="https://cdn.vuetifyjs.com/images/parallax/material.jpg" cover>
+                </v-img>
             </v-col>
             <v-col class="pa-0">
                 <v-container>
