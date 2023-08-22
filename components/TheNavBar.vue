@@ -73,4 +73,8 @@ const dialog = ref(false)
 .router-link-exact-active {
     color: #1976d2 !important;
 }
+
+.v-btn--variant-plain {
+    opacity: 1 !important;
+}
 </style>

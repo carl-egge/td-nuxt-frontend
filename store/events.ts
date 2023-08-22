@@ -46,6 +46,14 @@ export const useEventsStore = defineStore({
 
   getters: {
     /**
+     * getAll
+     * @returns {EventAPIData[]} All events in the store
+     */
+    getAll: (state): EventAPIData[] => {
+      return state.events;
+    },
+
+    /**
      * countEvents
      * @returns {number} The number of events in the store
      */
@@ -69,16 +77,23 @@ export const useEventsStore = defineStore({
      * Fetches all events from the pretix API and stores them in the state
      * 
      * TODO: Add filter to only get live and upcoming events
+     * TODO: Catch Errors such that the app does not crash
      */
     async fetchEvents(): Promise<void> {
       const config = useRuntimeConfig();
       const uri = config.public.pretixBaseUrl + config.public.pretixEndpoint + "/events"
       console.log("Now fetching events from: ", uri);
-      const { data }: any = await useFetch(uri, {
-        headers: { Authorization: "Token " + config.public.pretixApiKey }
+      const { data, error }: any = await useFetch(uri, {
+        headers: { Authorization: "Token " + config.public.pretixApiKey },
       });
-      if (data.value) {
+      if (error.value) {
+        console.log("Error fetch Events: ", error.value)
+        this.events = [];
+        // throw createError({statusCode: 404, statusMessage: "Page not found.", fatal: true})     
+      } else if (data.value) {
         this.events = data.value.results;
+      } else {
+        this.events = [];
       }
     },
   }

@@ -1,8 +1,14 @@
 <template>
     <div>
-        <h1>PROGRAMM</h1>
-        <div v-for="event in eventsStore.events">
+        <PageHero title="Programm" breadcrumb="home" />
+        <div v-if="eventsStore.countEvents > 0" v-for="event in eventsStore.getAll">
             <EventListItem :event="event" />
+        </div>
+        <div v-else class="text-center">
+            <p class="my-6">Keine Events gefunden</p>
+            <v-btn class="my-4">
+                <a href="/stuecke"> Erneut Versuchen </a>
+            </v-btn>
         </div>
     </div>
 </template>
@@ -17,9 +23,6 @@
 
 import { useEventsStore } from '~/store/events';
 const eventsStore = useEventsStore();
-if (eventsStore.events.length === 0) {
-    throw createError({ statusCode: 404, statusMessage: 'No Events found' })
-}
 </script>
 
 <style lang="scss" scoped></style>
