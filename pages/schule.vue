@@ -55,6 +55,13 @@
 
             <v-row>
                 <v-col>
+                    <h4>Unsere Lehrer:</h4>
+                    <TeacherSlider />
+                </v-col>
+            </v-row>
+
+            <v-row>
+                <v-col>
                     <p><strong>Startdeck KURSE | Einblick und Überblick für Theaterbesessene</strong><br>
                         Die StartDECK Kurse sind Einsteigerkurse, die euch und uns die Möglichkeit geben sollen uns
                         gegenseitig kennenzulernen. In sechs Terminen machen die Teilnehmer:innen erste Schritte auf der
@@ -124,6 +131,11 @@
 </script>
 
 <style lang="scss" scoped>
+h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
 p {
     margin-bottom: 1rem;
 }
