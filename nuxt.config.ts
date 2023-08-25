@@ -27,8 +27,16 @@ export default defineNuxtConfig({
     
   // Add Stylesheets
   css: [
-    "~/assets/style/main.scss",
+    "~/assets/css/main.scss",
+    "~/assets/css/tailwind.css",
   ],
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 
   // Process Environment Variables
   runtimeConfig: {
