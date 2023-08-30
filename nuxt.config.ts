@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@invictus.codes/nuxt-vuetify',
     '@pinia/nuxt',
     'nuxt-mapbox',
+    'nuxt-headlessui',
   ],
 
   // Meta Tags and Head
